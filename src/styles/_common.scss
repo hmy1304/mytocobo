@@ -1,0 +1,99 @@
+.section {
+    padding: 6rem 0;
+    position: relative;
+    z-index: 0;
+    height: 100vh;
+
+    
+
+    h2.tit {
+        font-size: 6rem;
+        font-weight: 200;
+    }
+
+    p.txt {
+        font-size: 2.1rem;
+    }
+    p.txt-1 {
+        font-size: 1.6rem;
+        line-height: 2.6rem;
+        color: #202020;
+    }
+    p.txt-2{
+        font-size: 1.9rem;
+        color: var(--secondary);
+        font-family: "Source serif 4", serif;
+    }
+
+    a.btn {
+        display: inline-block;
+        margin-top: 3rem;
+        text-align: center;
+        font-size: 1.6rem;
+        width: 27rem;
+        height: 5rem;
+        align-content: center;
+        color: var(--bg);
+        background: var(--primary);
+        border-radius: 6rem;
+        position: relative;
+        border: .1rem solid transparent;
+        transition: all .8s;
+        overflow: hidden;
+        z-index: 1;
+        cursor: pointer;
+
+        &::after {
+            content: "";
+            border-radius: 6rem;
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: var(--primary);
+            left: 0;
+            top: 0;
+            z-index: 0;
+            transition: all .5s;
+            opacity: 0;
+        }
+        &:hover {
+            color: var(--primary);
+            &::after {
+                opacity: 1;
+                background: var(--bg);
+                z-index: -1;
+            }
+        }
+    }
+}
+
+.section,
+header,
+footer {
+    .inner {
+        max-width: var(--maxw);
+        margin: auto;
+        position: relative;
+        height: 100%;
+    }
+}
+
+.app-container{
+    &.up {
+        .TopBanner {
+            top: -10%;
+        }
+        header {
+            top: 0;
+        }
+        #hero {
+            margin-top: 0;
+        }
+    }
+    &.scrolled {
+        header{
+            background: rgba(0, 0, 0, .33);
+        }
+    }
+}
