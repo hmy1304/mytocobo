@@ -18,6 +18,9 @@ const FixedTopBtn = () => {
       <a href="#" className='talk-btn'>
         TCB
       </a>
+      <p>
+        1:1 talk
+      </p>
     </div>
   )
 }

@@ -1,0 +1,98 @@
+.hero-container {
+    height: 90rem;
+
+    h2.tit {
+        font-size: 7.3rem;
+    }
+
+    .swiper {
+        height: 100%;
+    }
+
+    .hero-slide {
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        .inner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            max-width: 164rem;
+
+            h2.tit {
+                color: var(--bg);
+                font-weight: 500;
+            }
+
+            p.txt {
+                font-size: 2.1rem;
+                margin-top: 4rem;
+                color: var(--bg);
+            }
+        }
+
+        
+    }
+
+    .hero-nav {
+        position: absolute;
+        z-index: 3;
+        left: 7.5vw;
+        bottom: 8.7rem;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        .arr-prev,
+        .arr-next {
+            width: 5rem;
+            height: 1.7rem;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            font-size: 0;
+            cursor: pointer;
+        }
+
+        .arr-prev {
+            background: url("../../../public/img/hero-prev.svg");
+        }
+
+        .arr-next {
+            background: url("../../../public/img/hero-next.svg");
+        }
+
+        .swiper-pagination-fraction {
+            width: 5rem;
+            height: 5rem;
+            position: relative;
+            font-size: 0;
+            color: var(--bg);
+            .swiper-pagination-current {
+                font-size: 2.2rem;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+            .swiper-pagination-total {
+                font-size: 2.2rem;
+                position: absolute;
+                right: 0;
+                bottom: 0;
+            }
+
+            &::after {
+                content: "";
+                display: block;
+                position: absolute;
+                width: 1px;
+                height: 50px;
+                background: var(--bg);
+                left: 10%;
+                top: 40%;
+                transform: rotate(45deg) translate(-50%, -50%);
+            }
+        }
+    }
+}
