@@ -1,0 +1,15 @@
+.hello-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .t-wrap {
+        text-align: center;
+        width: 63rem;
+        h2.tit {
+            color: var(--primary);
+            margin: 4rem 0 2rem;
+            font-weight: 500;
+        }
+    }
+}

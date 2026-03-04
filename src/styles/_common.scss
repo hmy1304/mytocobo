@@ -9,9 +9,9 @@
         transition: margin-top .3s;
     }
 
-    // &#products {
-    //     padding: 10rem 0;
-    // }
+    &#category {
+        background: var(--primary);
+    }
 
     h2.tit {
         font-size: 6rem;
@@ -28,7 +28,7 @@
     }
     p.txt-2{
         font-size: 1.9rem;
-        color: var(--secondary);
+        color: var(--primary);
         font-family: "Source serif 4", serif;
     }
 
