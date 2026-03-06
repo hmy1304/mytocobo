@@ -1,0 +1,65 @@
+.trend-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h2.tit {
+        font-weight: 500;
+    }
+    p.txt {
+        margin: 2rem 0 5rem;
+    }
+
+    .slider-wrap {
+        width: 65rem;
+        height: 63.6rem;
+        position: relative;
+
+        
+
+        .in {
+            position: absolute;
+            width: 200%;
+            height: 100%;
+
+            .trend-slider {
+                height: 100%;
+
+                .swiper-slide {
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+
+                    a{
+                        display: block;
+                        height: 100%;
+                        position: relative;
+
+                        .t-review {
+                            position: absolute;
+                            bottom: 20%;
+                            left: 5rem;
+                            opacity: 0;
+
+                            .review-title {
+                                color: var(--secondary);
+                                font-size: 3.6rem;
+                            }
+                            .preview {
+                                color: var(--secondary);
+                                font-size: 2.4rem;
+                                margin-top: 2rem;
+                            }
+                        }
+                        &:hover {
+                            background: rgba(0, 0, 0, 0.33);
+                            .t-review {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

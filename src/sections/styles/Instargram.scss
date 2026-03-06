@@ -1,0 +1,33 @@
+.instargram-inner {
+    .t-wrap {
+        h2.tit {
+            color: var(--secondary);
+            font-weight: 500;
+        }
+    
+        p.txt {
+            color: var(--muted);
+            margin-top: 2.2rem;
+            font-family: 'Source Serif Pro',serif;
+            font-style: italic;
+        }
+
+        .instar-list {
+            display: flex;
+            gap: .4rem;
+            margin-top: 4rem;
+
+            li {
+                flex: 1;
+                a {
+                    display: block;
+                    height: 21rem;
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    font-size: 0;
+                }
+            }
+        }
+    }
+}
