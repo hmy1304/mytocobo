@@ -1,8 +1,151 @@
-import React from 'react'
+import React, {useState, useEffect, useRef} from 'react'
+import "./styles/Footer.scss"
+import { logoData,
+  companyData,
+  customerCenterData,
+  socialLinks,
+  footerMenus,
+  footerLegal
+ } from '../utils/footer'
 
 const Footer = () => {
+  const [isOpen, setIsOpen] = useState(false)
+  const hiddenContentRef = useRef(null) 
+
+  useEffect(()=>{
+    const handleResize = () => {
+      setIsOpen(window.innerWidth>=1111)
+    }
+    handleResize()
+
+    window.addEventListener('resize', handleResize)
+
+    return () => window.removeEventListener('resize', handleResize)
+  },[])
+
+  useEffect(()=>{
+    const el = hiddenContentRef.current
+    if(isOpen) {
+      el.style.height = `${el.scrollHeight}px`
+
+      const onTransitionEnd = () => {
+        el.style.height = "auto"
+        el.removeEventListener('transitionend',onTransitionEnd)
+      }
+      el.addEventListener('transitionEnd', onTransitionEnd)
+    } else {
+      el.style.height = `${el.scrollHeight}px`
+
+      void el.offsetHeight 
+
+      el.style.height = '0px'
+    }
+  },[isOpen])
+
   return (
-    <div>Footer</div>
+    <footer>
+      <div className='inner footer-inner'>
+        <div className="left">
+          <h3>
+            <a href={logoData.href}>
+              Discovery
+            </a>
+          </h3>
+          <ul className="foot-list-1">
+            {companyData.map((c,i)=>(
+              <li key={i}>
+                {c}
+              </li>
+            ))}
+          </ul>
+          <div className="footer-legal">
+            <p>
+              {footerLegal.copyright}
+            </p>
+            <div className="legal-links">
+              {footerLegal.links.map((l,i)=>(
+                <a href={l.href} key={i}>
+                  {l.label}
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="center">
+          <div className="foot-menus">
+            {footerMenus.map((menu,i)=>(
+              <div key={i}>
+                <h4>{menu.title}</h4>
+                <ul>
+                  {menu.items.map((item,j)=>(
+                    <li key={j}>
+                      <a href={item.href}>
+                        {item.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="right">
+          <div
+          onClick={()=>{
+            if(window.innerWidth >= 1111) return
+            setIsOpen(prevStatus=>!prevStatus)
+          }}
+          className={`cus-wrap ${isOpen? "open" : ""}`}>
+            <h4>
+              {customerCenterData.title}
+              <span className='mob-only m-plus'></span>
+            </h4>
+            <div className="hidden" ref={hiddenContentRef}>
+              <p className='cs-box'>
+                <a href={customerCenterData.tel.href}>
+                  {customerCenterData.tel.value}
+                </a>
+              </p>
+              <p>{customerCenterData.hours}</p>
+              <p>{customerCenterData.notice}</p>
+              <a href={customerCenterData.talk.href} className="talk-btn">
+                {customerCenterData.talk.label}
+              </a>
+            </div>
+          </div>
+          <div className="footer-legal mob-only">
+            <div className="legal-links">
+              {footerLegal.links.map((l,i)=>(
+                <a href={l.href} key={i}>
+                  {l.label}
+                </a>
+              ))}
+            </div>
+            <p>
+              {footerLegal.copyright}
+            </p>
+          </div>
+          <ul className="sns-links">
+            {socialLinks.map((sns)=>(
+              <li key={sns.id}>
+                <a 
+                target='_blank'
+                rel='noreferrer noopener'
+                aria-label={sns.label}
+                title={sns.label}
+                href={sns.href}>
+                  {React.createElement(sns.icon,{
+                    size:22, "aria-hidden":true
+                  })}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </footer>
   )
 }
 
