@@ -7,17 +7,19 @@ const Nav = () => {
     const scrollTo = useSmoothScroll()
 
     return (
-        <div className='navList'>
+        <ul className='navList'>
             {navLinks.map((nav)=>(
-                <a href={nav.href}
-                onClick={(e)=>{
-                    e.preventDefault()
-                    scrollTo(nav.id)
-                }}>
-                    {nav.label}
-                </a>
+                <li key={nav.id}>
+                    <a href={nav.href}
+                    onClick={(e)=>{
+                        e.preventDefault()
+                        scrollTo(nav.id)
+                    }}>
+                        {nav.label}
+                    </a>
+                </li>
             ))}
-        </div>
+        </ul>
     )
 }
 

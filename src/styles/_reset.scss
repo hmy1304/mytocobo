@@ -115,3 +115,17 @@ a {
 img {
   max-width: 100%;
 }
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 3px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--secondary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border: 50px;
+}

@@ -69,6 +69,7 @@ footer {
             flex: 1;
 
             .cus-wrap {
+                margin-bottom: 5rem;
                 @media screen and (max-width:1111px) {
                     border-top: .1rem solid var(--line);
                     border-bottom: .1rem solid var(--line);
@@ -78,8 +79,10 @@ footer {
 
                 }
 
-
-                
+                h4 {
+                        font-size: 1.8rem;
+                        font-weight: 400;
+                    }
 
                 .cs-box a {
                     display: block;
@@ -87,6 +90,7 @@ footer {
                     color: var(--primary);
                     margin: 2rem 0 1.7rem;
                     font-weight: 400;
+                    
 
                     @media screen and (max-width:1111px) {
                         margin-top: 2rem;
@@ -133,12 +137,23 @@ footer {
             .sns-links {
                 display: flex;
                 gap: 1rem;
+                
                 li {
                     width: 2.5rem;
                     height: 2.5rem;
                     a {
                         width: 100%;
                         height: 100%;
+                    }
+
+                    &:nth-of-type(3) {
+                        ::after {
+                            display: block;
+                            content: "kid";
+                            text-align: center;
+                            font-size: 1.3rem;
+                            
+                        }
                     }
                 }
             }

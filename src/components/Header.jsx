@@ -3,12 +3,20 @@ import "./styles/Header.scss"
 import { headerData } from '../utils/header'
 import Nav from './Nav'
 import Util from "./Util"
+import Mnav from './Mnav'
 
-const Header = () => {
+const Header = ({mNavOpen, onNavOpen, onNavClose}) => {
   const headerLogo = headerData.logo
   return (
     <header>
       <div className="inner">
+        <a href="#" className='mob-nav-btn'
+        onClick={(e)=>{
+          e.preventDefault()
+          onNavOpen()
+        }}>
+          <img src="/img/menu.svg" alt="메뉴" />
+        </a>
         <Nav />
         <h1 className="tit">
           <a href={headerLogo.href}>
@@ -17,6 +25,7 @@ const Header = () => {
         </h1>
         <Util />
       </div>
+      {mNavOpen && <Mnav onNavClose={onNavClose}/>}
     </header>
   )
 }
