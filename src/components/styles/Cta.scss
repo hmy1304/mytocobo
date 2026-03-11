@@ -3,8 +3,9 @@
     .cta-list{
         display: flex;
         justify-content: center;
-        align-items: center;
+        
         gap: 6.4rem;
+        text-align: center;
 
         .img-wrap{
             width: 13rem;
@@ -18,6 +19,38 @@
             text-align: center;
             font-size: 1.6rem;
             margin-top: 1.6rem;
+        }
+    }
+    @media screen and (max-width:1280px) {
+        .cta-list {
+            gap: 2rem;
+            justify-content: space-between;
+            padding: 0 6rem;
+            flex-wrap: wrap;
+        }
+    }
+    @media screen and (max-width:855px) {
+        
+        .cta-list {
+            justify-content: center;
+            padding: 0 2rem;
+            gap: 2rem;
+        }
+    }
+
+    @media screen and (max-width:490px) {
+        padding-bottom: 5rem;
+        .cta-list {
+            
+            .img-wrap {
+                width: 9.5rem;
+                height: 9.5rem;
+                
+                
+            }
+            p {
+                font-size: 1.2rem;
+            }
         }
     }
 }

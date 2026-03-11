@@ -11,7 +11,7 @@ const Cta = () => {
           <li key={c.id}>
             <a href={c.id}>
               <div
-              style={{background:`url(${c.img.src})`}} 
+              style={{backgroundImage:`url(${c.img.src})`}} 
               className="img-wrap"></div>
               <p>
                 {c.name}

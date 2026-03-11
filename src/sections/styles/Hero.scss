@@ -26,19 +26,46 @@
             h2.tit {
                 color: var(--bg);
                 font-weight: 500;
-                @media screen and (max-width:1111px) {
-                    font-size: 5rem;
-                }
+                
+                
             }
 
             p.txt {
                 font-size: 2.1rem;
                 margin-top: 4rem;
                 color: var(--bg);
+                
+                
             }
 
-            @media screen and (max-width:599px) {
+            @media screen and (max-width:1280px) {
                 .t-wrap {
+                    max-width: 48rem;
+
+                    h2.tit {
+                        font-size: 4rem;
+                        
+                    }
+                    p.txt {
+                        font-size: 1.8rem;
+                    }
+                    a.btn {
+                        width: 21rem;
+                    }
+                }
+            }
+
+            @media screen and (max-width:390px) {
+                .t-wrap {
+                    max-width: 21.5rem;
+
+                    h2.tit {
+                        font-size: 3rem;
+                        line-height: 3.8rem;
+                    }
+                    p.txt {
+                        font-size: 1.4rem;
+                    }
                     a.btn {
                         display: none;
                     }
