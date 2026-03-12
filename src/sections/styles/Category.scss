@@ -80,6 +80,10 @@
             .swiper-pagination-progressbar-fill {
                 background: var(--secondary);
             }
+            @media screen and (max-width:1280px) {
+                width: 90vw;
+                margin: 6.4rem 3rem 0;
+            }
         }
     }
 

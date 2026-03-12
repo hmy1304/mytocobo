@@ -1,6 +1,10 @@
 footer {
     padding: 10rem 1rem;
 
+    @media screen and (max-width:490px) {
+        padding: 5rem 0;
+    }
+
     .footer-inner {
         display: flex;
         justify-content: space-between;
