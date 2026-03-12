@@ -3,11 +3,35 @@
     justify-content: space-between;
     align-items: center;
 
+    @media screen and (max-width:1280px) {
+        flex-direction: column;
+        gap: 5rem;
+        .t-wrap {
+            text-align: center;
+
+            a.btn {
+                width: 21rem;
+            }
+        }
+    }
+
     h2.tit {
         font-weight: 500;
+        @media screen and (max-width:1280px) {
+            font-size: 5rem;
+        }
+        @media screen and (max-width:490px) {
+            font-size: 3.2rem;
+        }
     }
     p.txt {
         margin: 2rem 0 5rem;
+        @media screen and (max-width:1280px) {
+            margin-bottom: 4rem;
+        }
+        @media screen and (max-width:490px) {
+            font-size: 1.8rem;
+        }
     }
 
     .slider-wrap {
@@ -15,12 +39,23 @@
         height: 63.6rem;
         position: relative;
 
-        
+        @media screen and (max-width:1280px) {
+            width: 90vw;
+            height: 40rem;
+        }
 
         .in {
             position: absolute;
             width: 200%;
             height: 100%;
+
+            @media screen and (max-width:1280px) {
+                width: 150%;
+            }
+            
+            @media screen and (max-width:490px) {
+                width: 200%;
+            }
 
             .trend-slider {
                 height: 100%;
@@ -37,18 +72,24 @@
 
                         .t-review {
                             position: absolute;
-                            bottom: 20%;
+                            bottom: 10%;
                             left: 5rem;
                             opacity: 0;
 
                             .review-title {
                                 color: var(--secondary);
                                 font-size: 3.6rem;
+                                @media screen and (max-width:1280px) {
+                                    font-size: 2.9rem;
+                                }
                             }
                             .preview {
                                 color: var(--secondary);
                                 font-size: 2.4rem;
                                 margin-top: 2rem;
+                                @media screen and (max-width:1280px) {
+                                    font-size: 1.7rem;
+                                }
                             }
                         }
                         &:hover {
