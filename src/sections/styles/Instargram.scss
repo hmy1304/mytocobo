@@ -3,12 +3,7 @@
         h2.tit {
             color: var(--secondary);
             font-weight: 500;
-            @media screen and (max-width:1280px) {
-                font-size: 5rem;
-            }
-            @media screen and (max-width:490px) {
-                font-size: 3.2rem;
-            }
+            
         }
     
         p.txt {
@@ -19,9 +14,7 @@
             @media screen and (max-width:1280px) {
                 margin-bottom: 4rem;
             }
-            @media screen and (max-width:490px) {
-                font-size: 1.8rem;
-            }
+            
         }
 
         .instar-list {

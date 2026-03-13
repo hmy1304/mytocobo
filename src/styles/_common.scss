@@ -24,10 +24,23 @@
     h2.tit {
         font-size: 6rem;
         font-weight: 200;
+        
+        @media screen and (max-width:1280px) {
+            font-size: 5rem;
+        }
+        @media screen and (max-width:490px) {
+            font-size: 3.2rem;
+        }
     }
 
     p.txt {
         font-size: 2.1rem;
+        @media screen and (max-width:1280px) {
+            font-size: 1.8rem;
+        }
+        @media screen and (max-width:490px) {
+            font-size: 1.4rem;
+        }
     }
     p.txt-1 {
         font-size: 1.6rem;
@@ -79,6 +92,17 @@
                 background: var(--bg);
                 z-index: -1;
             }
+        }
+
+        @media screen and (max-width:1280px) {
+            width: 21rem;
+            height: 4rem;
+        }
+
+        @media screen and (max-width:490px) {
+            width: 12rem;
+            height: 3rem;
+            font-size: 1.3rem;
         }
     }
 }

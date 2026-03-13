@@ -8,30 +8,19 @@
         gap: 5rem;
         .t-wrap {
             text-align: center;
-
-            a.btn {
-                width: 21rem;
-            }
         }
     }
 
     h2.tit {
         font-weight: 500;
-        @media screen and (max-width:1280px) {
-            font-size: 5rem;
-        }
-        @media screen and (max-width:490px) {
-            font-size: 3.2rem;
-        }
+        
     }
     p.txt {
         margin: 2rem 0 5rem;
         @media screen and (max-width:1280px) {
             margin-bottom: 4rem;
         }
-        @media screen and (max-width:490px) {
-            font-size: 1.8rem;
-        }
+       
     }
 
     .slider-wrap {

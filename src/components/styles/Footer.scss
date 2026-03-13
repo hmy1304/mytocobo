@@ -9,7 +9,7 @@ footer {
         display: flex;
         justify-content: space-between;
         max-width: 172rem;
-        gap: 5rem;
+        gap: 3rem;
 
         @media screen and (max-width:1111px) {
             flex-direction: column;
