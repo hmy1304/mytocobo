@@ -12,7 +12,7 @@ export const heroSlides = [
     ctaHref: "/products",
     image: {
       desktop: img("heroBg1.png"),
-      mobile: img("heroBg1.png"),
+      mobile: img("heroBgM1.png"),
     },
     alt: "비건 스킨케어 히어로 배너",
     active: true,
@@ -27,7 +27,7 @@ export const heroSlides = [
     ctaHref: "/story/hydration",
     image: {
       desktop:  img("heroBg2.png"),
-      mobile: img("heroBg2.png"),
+      mobile: img("heroBgM2.png"),
     },
     alt: "보습 라인 배너",
     active: true,
@@ -42,7 +42,7 @@ export const heroSlides = [
     ctaHref: "/collections/sensitive",
     image: {
       desktop:  img("heroBg3.png"),
-      mobile: img("heroBg3.png"),
+      mobile: img("heroBgM3.png"),
     },
     alt: "민감 피부 라인 배너",
     active: true,
