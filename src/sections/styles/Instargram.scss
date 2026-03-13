@@ -16,6 +16,9 @@
             }
             
         }
+        @media screen and (max-width:490px) {
+            text-align: center;
+        }
 
         .instar-list {
             display: flex;
@@ -24,6 +27,7 @@
             
             @media screen and (max-width:1280px) {
                 flex-wrap: wrap;
+                justify-content: center;
             }
 
             li {
@@ -37,9 +41,13 @@
                     font-size: 0;
                 }
                 @media screen and (max-width:1280px) {
-                    flex: content;
+                    flex: 0;
+                    width: 15rem;
+                    height: 15rem;
+                    
                     a{
-                        width: 21rem;
+                        width: 15rem;
+                        height: 15rem;
                     }
                 }
                 
