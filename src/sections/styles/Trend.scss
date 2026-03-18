@@ -27,6 +27,7 @@
         width: 65rem;
         height: 63.6rem;
         position: relative;
+        // overflow: hidden;
 
         @media screen and (max-width:1280px) {
             width: 90vw;
@@ -37,6 +38,7 @@
             position: absolute;
             width: 200%;
             height: 100%;
+            overflow: hidden;
 
             @media screen and (max-width:1280px) {
                 width: 150%;
